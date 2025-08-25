@@ -7,12 +7,24 @@ This is a personal portfolio website built from the ground up with a custom, sec
 ## Screenshots
 
 *(You can add your own screenshots here. I recommend one of the frontend and one of the admin dashboard.)*
+**Frontend Screenshots:**
+**Hero Section:**
+![Hero Section](screenshots/frontend.png)
 
-**Frontend:**
-![Frontend Screenshot](path/to/your/frontend-screenshot.png)
+**My Projects:**
+![My Projects Screenshot](screenshots/projects.png)
 
+**Testimonials:**
+![Testimonials Screenshot](screenshots/testimonials.png)
+
+**Admin Panel:**
 **Admin Dashboard:**
-![Admin Screenshot](path/to/your/admin-dashboard-screenshot.png)
+![Admin Screenshot](screenshots/admin-dasboard.png)
+
+**Add Projects Section:**
+![Admin Screenshot](screenshots/project-add.png)
+
+
 
 ## Features
 
