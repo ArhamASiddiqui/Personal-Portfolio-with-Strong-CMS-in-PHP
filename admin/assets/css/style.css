@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* General Body and Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* --- UPGRADE: Added a subtle gradient for the glass effect to work on --- */
+    background-color: #f0eefd;
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(253, 100%, 95%, 1) 0px, transparent 50%),
+        radial-gradient(at 98% 1%, hsla(225, 100%, 90%, 1) 0px, transparent 50%);
+    overflow-x: hidden;
+    color: #444; /* Slightly darker default text color for better contrast */
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Glassmorphism Sidebar Styling --- */
+.sidebar {
+    width: 250px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    
+    /* Glass Effect */
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #7b68ee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #333; /* Darker text for readability on glass */
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #493c99; /* Darker purple for readability */
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.sidebar-nav a i {
+    font-size: 1.2em;
+    margin-right: 15px;
+    width: 20px;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: #fff;
+    color: #7b68ee;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 30px 40px;
+    background-color: transparent; /* Make background transparent to see body gradient */
+    transition: all 0.3s ease;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: transparent;
+}
+
+.main-header h2 {
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.header-right i {
+    font-size: 1.2em;
+    color: #7b68ee;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.user-profile {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+    border: 2px solid #fff;
+}
+
+.user-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-body {
+    padding: 20px 0;
+}
+
+/* --- Glassmorphism Cards --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(123, 104, 238, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #5d48d0;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.card-value {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Table Styling Polish */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 15px; /* Increased padding */
+    border-bottom: 1px solid rgba(123, 104, 238, 0.1);
+    color: #333;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Subtle hover effect */
+}
+
+.data-table thead th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em; /* Slightly smaller */
+    color: #7b68ee;
+    text-align: left;
+}
+
+.data-table img.project-image {
+    width: 90px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* --- Polished Action Buttons --- */
+.actions-container {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+.actions-container form {
+    margin: 0;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 12px;
+    height: 34px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.action-btn i {
+    margin-right: 6px;
+}
+.reply-btn { background: linear-gradient(45deg, #2ecc71, #28b485); }
+.edit-btn { background: linear-gradient(45deg, #7b68ee, #5d48d0); }
+.action-btn.delete-btn { background: linear-gradient(45deg, #e74c3c, #c0392b); }
+
+
+/* (All other styles for Form, Search, Notifications remain the same) */
+/* You can copy the rest of your CSS from the previous version below this line */
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.5);
+    color: #333;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #7b68ee;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.2);
+}
+button[type="submit"] {
+    width: auto;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7b68ee;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+button[type="submit"]:hover {
+    background-color: #5d48d0;
+    transform: translateY(-2px);
+}
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #c3e6cb;
+}
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#search-icon i {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #7b68ee;
+    transition: color 0.3s ease;
+}
+.search-bar {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: -5px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 5px;
+    z-index: 100;
+}
+.search-bar.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    background: none;
+    width: 200px;
+}
+.search-bar button {
+    border: none;
+    background: #7b68ee;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#notification-bell {
+    font-size: 1.2em;
+    color: #7b68ee;
+    cursor: pointer;
+}
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #e74c3c;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    border: 2px solid #fff;
+}
+.notifications-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 350px;
+    border-radius: 10px;
+    z-index: 100;
+    
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(123, 104, 238, 0.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+.notifications-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.dropdown-header span {
+    font-weight: 600;
+    color: #333;
+}
+.dropdown-header a {
+    font-size: 12px;
+    color: #7b68ee;
+    text-decoration: none;
+}
+.dropdown-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+.notification-item {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: #555;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+.notification-item:last-child {
+    border-bottom: none;
+}
+.notification-item:hover {
+    background-color: rgba(123, 104, 238, 0.1);
+}
+.notification-item-time {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    margin-top: 5px;
+}
+.no-notifications {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+}
+/* --- LAYOUT AND CHART FIX --- */
+
+/* This rule makes the sidebar's width stable and prevents it from collapsing */
+.sidebar {
+    flex-shrink: 0;
+}
+
+/* This rule controls the size of the charts on the dashboard */
+.chart-card canvas {
+    max-width: 100%;
+    max-height: 350px; /* You can adjust this value if you want */
+}
