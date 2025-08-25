@@ -9,7 +9,7 @@ This is a personal portfolio website built from the ground up with a custom, sec
 *(You can add your own screenshots here. I recommend one of the frontend and one of the admin dashboard.)*
 
 **Frontend:**
-![Frontend Screenshot](path/to/your/frontend-screenshot.png)
+![Frontend Screenshot]screenshots/frontend.png
 
 **Admin Dashboard:**
 ![Admin Screenshot](path/to/your/admin-dashboard-screenshot.png)
